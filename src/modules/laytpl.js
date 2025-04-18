@@ -76,9 +76,9 @@
   var vars = {
     // 字符转义
     escape: function(html) {
-      var exp = /[<"'>]|&(?=#[a-zA-Z0-9]+)/g;
+      var exp = /[<"'>]|&(?=#?[a-zA-Z0-9]+)/g;
       if (html === undefined || html === null) return '';
-      html = ''+ html;
+      html += '';
       if (!exp.test(html)) return html;
       return html.replace(exp, function(str) {
         return '&#'+ str.charCodeAt(0) + ';';
@@ -201,7 +201,7 @@
     var closeDelimiter = options.close;
     var condense = options.condense;
     var regex = tools.regex;
-    const placeholder = '\u2028'; // Unicode 行分隔符
+    var placeholder = '\u2028'; // Unicode 行分隔符
 
     // console.log('compile');
 

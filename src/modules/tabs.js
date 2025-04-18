@@ -28,8 +28,6 @@ layui.define('component', function(exports) {
       CARD: 'layui-tabs-card'
     },
 
-    isRenderOnEvent: false,
-
     // 渲染
     render: function() {
       var that = this;
@@ -563,7 +561,7 @@ layui.define('component', function(exports) {
 
     // 滚动结构
     var rollElem = {
-      elem: $('<div class="'+ CLASS_SCROLL +' layui-unselect"></div>'),
+      elem: $('<div class="'+ CLASS_SCROLL +' layui-border-box layui-unselect"></div>'),
       bar: $([
         '<div class="'+ CLASS_BAR +'">',
           '<i class="layui-icon '+ CLASS_BAR_ICON[0] +'" lay-mode="prev"></i>',
