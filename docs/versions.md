@@ -11,6 +11,36 @@ toc: true
 
 <h2 id="2.10+" lay-toc="{title: '2.10+'}"></h2>
 
+<h2 id="v2.11.2" lay-pid="2.10+" class="ws-anchor">
+  v2.11.2
+  <span class="layui-badge-rim">2025-05-15</span>
+</h2>
+
+- #### form-select
+  - 修复 `<option>` 文本两端的 Unicode 空格(U+00A0)被去除的问题 #2676 @Sight-wcg
+- #### tabs
+  - 优化 `header` 选项初始值的判断，允许数组为空 #2680 @sentsim
+  - 优化 `tabs.getBodyItem()` 第二个参数，可接受索引或 `lay-id` 值 #2680
+  - 优化 `tabs.add()` 的 `done` 回调，参数新增包含新标签项元素 #2680
+  - 优化 `tabs.change()` 方法，标签项打乱顺序时仍可通过 `lay-id` 切换 #2680
+
+### 下载： [layui-v2.11.2.zip](https://gitee.com/layui/layui/attach_files/2189123/download)
+
+---
+
+<h2 id="v2.11.1" lay-pid="2.10+" class="ws-anchor">
+  v2.11.1
+  <span class="layui-badge-rim">2025-05-06</span>
+</h2>
+
+- 修复 select 组件的字符转义问题 #2661 @sentsim
+- 修复 checkbox/radio 在 WebKit/537.36 的异常 #2637 @Sight-wcg
+- 优化 carousel 切换时的动画性能 #2654 @SessionHu
+
+### 下载： [layui-v2.11.1.zip](https://gitee.com/layui/layui/attach_files/2177069/download)
+
+---
+
 <h2 id="v2.11.0" lay-pid="2.10+" class="ws-anchor">
   v2.11.0
   <span class="layui-badge-rim">2025-04-21</span>
@@ -26,11 +56,11 @@ toc: true
 - #### [laytpl](./laytpl/)
   - 新增 `cache` 选项，用于是否开启模板缓存
   - 新增 `condense` 选项，用于是否压缩模板空白符，如将多个连续的空白符压缩为单个空格
-  - 新增 `tagStyle` 选项，用于设置界定符风格。默认仍采用 `< 2.11` 版本风格
+  - 新增 `tagStyle` 选项，用于设置标签风格。默认仍采用 `< 2.11` 版本风格
   - 新增 `laytpl.extendVars()` 方法，用于扩展模板内部变量
   - 新增 `compile` 实例方法，用于清除缓存后以便渲染时重新对模板进行编译
   - 新增 在模板中通过 `include()` 方法导入子模板的功能
-  - 新增 新的界定符风格：{{!`{{ 语句 }}` `{{= 转义输出 }}` `{{- 原文输出 }}` `{{# 注释 }}`!}}
+  - 新增 新的标签风格：{{!`{{ 语句 }}` `{{= 转义输出 }}` `{{- 原文输出 }}` `{{# 注释 }}`!}}
   - 新增 template 报错时的上下文捕获，基于映射，可更精确定位到模板具体错误行 #2650 @sentsim
   - 提升 模板解析的整体性能及稳定性
   - 内置 对多种模块加载方式的支持，以同时适配 Node.js 和浏览器端的使用场景
